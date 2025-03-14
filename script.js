@@ -1,7 +1,5 @@
 const img = document.querySelector("#diceImg")
 const button = document.querySelector("button")
-let userPoints = 0;
-let computerPoints = 0;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -13,6 +11,9 @@ function randint(min, max) {
 
 async function play() {
     button.disabled = true
+    log.innerHTML = ""
+    let userPoints = 0;
+    let computerPoints = 0;
     for (let r=0;r<3;r++) {
         const userNumber = randint(0, 20)
         const computerNumber = randint(0, 20)
@@ -26,11 +27,13 @@ async function play() {
 
         if (userNumber === 0) {
             log.innerHTML += "User lost!"
+            button.disabled = false
             return
         }
 
         if (computerNumber === 0) {
             log.innerHTML += "Computer lost!"
+            button.disabled = false
             return
         }
 
@@ -43,9 +46,9 @@ async function play() {
     log.innerHTML += `Computer points: ${computerPoints}<br>`
     await sleep(500)
     if (userPoints > computerPoints) {
-        log.innerHTML += `User wins!<br>`
+        log.innerHTML += `<strong>User wins!</strong><br>`
     } else if (userPoints < computerPoints) {
-        log.innerHTML += `Computer wins!<br>`
+        log.innerHTML += `<strong>Computer wins!</strong><br>`
     } else {
         log.innerHTML += `Tie!`
     }
