@@ -1,4 +1,5 @@
 const img = document.querySelector("#diceImg")
+const button = document.querySelector("button")
 let userPoints = 0;
 let computerPoints = 0;
 
@@ -11,6 +12,7 @@ function randint(min, max) {
 }
 
 async function play() {
+    button.disabled = true
     for (let r=0;r<3;r++) {
         const userNumber = randint(0, 20)
         const computerNumber = randint(0, 20)
@@ -47,6 +49,7 @@ async function play() {
     } else {
         log.innerHTML += `Tie!`
     }
+    button.disabled = false
 }
 
 async function roll(fn) {
