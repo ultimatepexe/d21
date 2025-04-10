@@ -1,4 +1,4 @@
-const img = document.querySelector("#diceImg")
+const np = document.querySelector("#np")
 const button = document.querySelector("button")
 
 function sleep(ms) {
@@ -61,95 +61,95 @@ async function roll(fn) {
         const randomNumber = randint(0, 20)
         switch (randomNumber) {
             case 0:
-                img.src = "images/d20-0.png"; break
+                np.textContent = "0"; break
             case 1:
-                img.src = "images/d20-1.png"; break
+                np.textContent = "1"; break
             case 2:
-                img.src = "images/d20-2.png"; break
+                np.textContent = "2"; break
             case 3:
-                img.src = "images/d20-3.png"; break
+                np.textContent = "3"; break
             case 4:
-                img.src = "images/d20-4.png"; break
+                np.textContent = "4"; break
             case 5:
-                img.src = "images/d20-5.png"; break
+                np.textContent = "5"; break
             case 6:
-                img.src = "images/d20-6.png"; break
+                np.textContent = "6"; break
             case 7:
-                img.src = "images/d20-7.png"; break
+                np.textContent = "7"; break
             case 8:
-                img.src = "images/d20-8.png"; break
+                np.textContent = "8"; break
             case 9:
-                img.src = "images/d20-9.png"; break
+                np.textContent = "9"; break
             case 10:
-                img.src = "images/d20-10.png"; break
+                np.textContent = "10"; break
             case 11:
-                img.src = "images/d20-11.png"; break
+                np.textContent = "11"; break
             case 12:
-                img.src = "images/d20-12.png"; break
+                np.textContent = "12"; break
             case 13:
-                img.src = "images/d20-13.png"; break
+                np.textContent = "13"; break
             case 14:
-                img.src = "images/d20-14.png"; break
+                np.textContent = "14"; break
             case 15:
-                img.src = "images/d20-15.png"; break
+                np.textContent = "15"; break
             case 16:
-                img.src = "images/d20-16.png"; break
+                np.textContent = "16"; break
             case 17:
-                img.src = "images/d20-17.png"; break
+                np.textContent = "17"; break
             case 18:
-                img.src = "images/d20-18.png"; break
+                np.textContent = "18"; break
             case 19:
-                img.src = "images/d20-19.png"; break
+                np.textContent = "19"; break
             case 20:
-                img.src = "images/d20-20.png"; break
+                np.textContent = "20"; break
             default:
-                img.src = "images/d20-template"
+                np.textContent = ""
         }
     }
     switch (fn) {
         case 0:
-            img.src = "images/d20-0.png"; break
+            np.textContent = "0"; break
         case 1:
-            img.src = "images/d20-1.png"; break
+            np.textContent = "1"; break
         case 2:
-            img.src = "images/d20-2.png"; break
+            np.textContent = "2"; break
         case 3:
-            img.src = "images/d20-3.png"; break
+            np.textContent = "3"; break
         case 4:
-            img.src = "images/d20-4.png"; break
+            np.textContent = "4"; break
         case 5:
-            img.src = "images/d20-5.png"; break
+            np.textContent = "5"; break
         case 6:
-            img.src = "images/d20-6.png"; break
+            np.textContent = "6"; break
         case 7:
-            img.src = "images/d20-7.png"; break
+            np.textContent = "7"; break
         case 8:
-            img.src = "images/d20-8.png"; break
+            np.textContent = "8"; break
         case 9:
-            img.src = "images/d20-9.png"; break
+            np.textContent = "9"; break
         case 10:
-            img.src = "images/d20-10.png"; break
+            np.textContent = "10"; break
         case 11:
-            img.src = "images/d20-11.png"; break
+            np.textContent = "11"; break
         case 12:
-            img.src = "images/d20-12.png"; break
+            np.textContent = "12"; break
         case 13:
-            img.src = "images/d20-13.png"; break
+            np.textContent = "13"; break
         case 14:
-            img.src = "images/d20-14.png"; break
+            np.textContent = "14"; break
         case 15:
-            img.src = "images/d20-15.png"; break
+            np.textContent = "15"; break
         case 16:
-            img.src = "images/d20-16.png"; break
+            np.textContent = "16"; break
         case 17:
-            img.src = "images/d20-17.png"; break
+            np.textContent = "17"; break
         case 18:
-            img.src = "images/d20-18.png"; break
+            np.textContent = "18"; break
         case 19:
-            img.src = "images/d20-19.png"; break
+            np.textContent = "19"; break
         case 20:
-            img.src = "images/d20-20.png"; break
+            np.textContent = "20"; break
         default:
-            img.src = "images/d20-template"
+            np.textContent = ""
     }
 }
