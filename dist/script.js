@@ -33,12 +33,14 @@ function play() {
             userLog.innerHTML += `${userNumber}<br>`;
             if (userNumber === 0) {
                 resultDisplay.innerHTML = `<strong>User lost.</strong>`;
+                button.disabled = false;
                 return;
             }
             const computerNumber = yield roll(computerNumberDisplay);
             computerLog.innerHTML += `${computerNumber}<br>`;
             if (computerNumber === 0) {
                 resultDisplay.innerHTML = `<strong>Computer lost.</strong>`;
+                button.disabled = false;
                 return;
             }
             userPoints += userNumber;

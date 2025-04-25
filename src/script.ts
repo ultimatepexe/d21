@@ -25,6 +25,7 @@ async function play(): Promise<void> {
         userLog.innerHTML += `${userNumber}<br>`
         if (userNumber === 0) {
             resultDisplay.innerHTML = `<strong>User lost.</strong>`
+            button.disabled = false;
             return
         }
 
@@ -32,12 +33,14 @@ async function play(): Promise<void> {
         computerLog.innerHTML += `${computerNumber}<br>`
         if (computerNumber === 0) {
             resultDisplay.innerHTML = `<strong>Computer lost.</strong>`
+            button.disabled = false;
             return
         }
 
         userPoints += userNumber
         computerPoints += computerNumber
     }
+    
     await sleep(1000)
     resultDisplay.innerHTML = `User points: ${userPoints}<br>Computer points: ${computerPoints}<br>`
     if (userPoints > computerPoints) {
